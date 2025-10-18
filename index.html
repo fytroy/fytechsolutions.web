@@ -3,248 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Quantumcom Digital: Architecting Digital Mastery. Enterprise-grade IT solutions in Cloud Transformation, Applied AI, and Advanced Cybersecurity.">
-    <meta name="keywords" content="IT solutions, cloud migration, AI development, machine learning, cybersecurity, digital transformation, enterprise IT, AWS, Azure, Google Cloud">
-    <title>Quantumcom Digital - Architecting Digital Mastery</title>
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/enhanced-styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>NovaTech Innovations | Pioneering Tomorrow's Digital Landscape</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="#" type="image/x-icon">
 </head>
 <body>
-<header class="header">
+
+<header id="main-header" class="sticky-header">
     <div class="container">
-        <a href="index.html" class="logo">Quantumcom<span>.</span></a>
-        <nav class="nav">
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <div class="nav-content-wrapper">
-                <ul class="nav-list" id="nav-menu">
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="solutions.html" class="nav-link">Solutions</a></li>
-                    <li><a href="about.html" class="nav-link">About Us</a></li>
-                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                    <li><a href="blog.html" class="nav-link">Insights</a></li>
-                    <li><a href="contact.html" class="nav-link btn btn-gradient-border">Contact Us</a></li>
-                </ul>
-            </div>
+        <a href="#" class="logo">NovaTech **Innovations**</a>
+
+        <nav id="desktop-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#case-studies">Case Studies</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact" class="cta-link">Contact</a></li>
+            </ul>
         </nav>
+
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
     </div>
 </header>
 
+<nav id="mobile-nav" class="mobile-menu">
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#case-studies">Case Studies</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact" class="cta-link">Contact</a></li>
+    </ul>
+</nav>
+
 <main>
-    <section class="hero" style="background-image: url('img/abstract-digital-background.jpg');">
+    <section id="home" class="hero section-reveal">
         <div class="container">
-            <h1 class="hero-title" data-animation="fade-in-up">
-                Architecting Digital Mastery: <br>Enterprise IT Solutions
-            </h1>
-            <p class="hero-subtitle" data-animation="fade-in-up" data-delay="100">
-                Accelerate innovation and achieve operational excellence with our expertise in **Cloud Transformation**, **Applied AI**, and **Zero-Trust Security**.
-            </p>
-            <div class="hero-actions" data-animation="fade-in-up" data-delay="200">
-                <a href="contact.html" class="btn btn-primary-gradient btn-large">Start a Consultation</a>
-                <a href="solutions.html" class="btn btn-secondary-outline btn-large">Explore Our Solutions</a>
+            <div class="hero-content">
+                <h1 class="tagline">Pioneering Tomorrow's Digital Landscape.</h1>
+                <p class="mission">We deliver cutting-edge technology solutions that drive business growth and efficiency for our global clientele. </p>
+                <a href="#contact" class="btn btn-primary">Start Your Project ➡️</a>
             </div>
+        </div>
+        <div class="hero-visual-placeholder"></div>
+    </section>
 
-            <div class="client-logos-strip" data-animation="fade-in" data-delay="400">
-                <p>Trusted by global leaders in:</p>
-                <div class="logos">
-                    <img src="img/logo-finance.svg" alt="Finance Industry Logo">
-                    <img src="img/logo-health.svg" alt="Healthcare Industry Logo">
-                    <img src="img/logo-tech.svg" alt="Technology Industry Logo">
-                    <img src="img/logo-manufacturing.svg" alt="Manufacturing Industry Logo">
+    <section id="services" class="services section-reveal">
+        <div class="container">
+            <h2 class="section-title">Core **Services**</h2>
+            <div class="services-grid">
+
+                <div class="service-card">
+                    <div class="icon">☁️</div>
+                    <h3>Cloud Computing</h3>
+                    <p>Managed AWS/Azure services, seamless migration, and cost optimization to scale your infrastructure efficiently.</p>
+                    <a href="#" class="read-more">Learn More</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">🔒</div>
+                    <h3>Cybersecurity</h3>
+                    <p>Enterprise-level protection, penetration testing, and real-time threat monitoring to secure your critical assets.</p>
+                    <a href="#" class="read-more">Learn More</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">💻</div>
+                    <h3>Software Development</h3>
+                    <p>Custom web, mobile, and enterprise applications engineered for performance, reliability, and user experience.</p>
+                    <a href="#" class="read-more">Learn More</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">📊</div>
+                    <h3>Data Analytics</h3>
+                    <p>Business intelligence, big data processing, and predictive modeling for data-driven strategic decisions.</p>
+                    <a href="#" class="read-more">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="stats-section background-surface-dark">
+    <section id="case-studies" class="case-studies section-reveal">
         <div class="container">
-            <div class="stats-grid">
-                <div class="stat" data-animation="fade-in">
-                    <div class="stat-number"><span class="counter" data-target="98">0</span>%</div>
-                    <div class="stat-label">Client Retention Rate</div>
+            <h2 class="section-title">Success **Stories**</h2>
+            <div class="case-study-content">
+                <div class="text-content">
+                    <h3>Globex Corp: AI-Driven BI Dashboard</h3>
+                    <p class="summary">Transformed 'Globex Corp' with a custom **AI-driven BI dashboard**, resulting in a **35% increase in operational efficiency**.</p>
+                    <p>Our team integrated advanced machine learning models with their existing data streams, providing real-time, actionable insights that empowered their leadership to optimize resource allocation and predict market shifts with unprecedented accuracy.</p>
+                    <a href="#" class="btn btn-secondary">Read Full Case Study</a>
                 </div>
-                <div class="stat" data-animation="fade-in" data-delay="100">
-                    <div class="stat-number"><span class="counter" data-target="350">0</span>+</div>
-                    <div class="stat-label">Successful Cloud Migrations</div>
-                </div>
-                <div class="stat" data-animation="fade-in" data-delay="200">
-                    <div class="stat-number"><span class="counter" data-target="4">0</span>X</div>
-                    <div class="stat-label">Average ROI Increase for Clients</div>
-                </div>
-                <div class="stat" data-animation="fade-in" data-delay="300">
-                    <div class="stat-number"><span class="counter" data-target="15">0</span>Y</div>
-                    <div class="stat-label">Years of Enterprise Experience</div>
+                <div class="case-study-visual-placeholder">
+                    <p>INSTRUCTION: Replace with an image representing a graph/dashboard/BI.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="services-section">
+    <section id="about" class="about section-reveal">
         <div class="container">
-            <h2 class="section-title" data-animation="fade-in-up">Our Strategic Pillars</h2>
-            <p class="section-subtitle" data-animation="fade-in-up" data-delay="100">Focused expertise in the technologies that define market leadership.</p>
+            <h2 class="section-title">Why **NovaTech**?</h2>
+            <p class="mission-statement">Our foundation is built on **trust, innovation, and dynamic execution**. We are not just a vendor; we are your strategic technology partner, committed to your long-term digital success and pioneering the future of your business.</p>
+            <a href="#contact" class="btn btn-primary">Let's Connect</a>
+        </div>
+    </section>
 
-            <div class="service-cards-grid">
-                <div class="service-card enhanced-card" data-animation="fade-in-up">
-                    <i class="fas fa-cloud-upload-alt fa-3x icon-gradient"></i>
-                    <h3>Cloud Infrastructure & DevOps</h3>
-                    <p>Building high-availability, hybrid, and multi-cloud platforms. Achieve continuous integration with robust DevOps pipelines.</p>
-                    <a href="solutions.html#cloud" class="read-more-link">Learn More <i class="fas fa-arrow-right"></i></a>
+    <section id="testimonials" class="testimonials section-reveal">
+        <div class="container">
+            <h2 class="section-title">Client **Trust**</h2>
+
+            <div class="testimonial-carousel">
+                <div class="testimonial-slide active">
+                    <blockquote>"NovaTech's cybersecurity team secured our entire enterprise. The peace of mind is invaluable."</blockquote>
+                    <cite>— Alex C., CEO, Financial Group</cite>
                 </div>
-                <div class="service-card enhanced-card" data-animation="fade-in-up" data-delay="100">
-                    <i class="fas fa-brain fa-3x icon-gradient"></i>
-                    <h3>Applied AI & Machine Learning</h3>
-                    <p>From predictive analytics to custom generative AI models, we embed intelligence into your business processes for smarter decisions.</p>
-                    <a href="solutions.html#ai" class="read-more-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                <div class="testimonial-slide">
+                    <blockquote>"The custom application they built increased our market response time by 50%. Truly innovative solutions!"</blockquote>
+                    <cite>— Sarah L., COO, E-Commerce Startup</cite>
                 </div>
-                <div class="service-card enhanced-card" data-animation="fade-in-up" data-delay="200">
-                    <i class="fas fa-shield-alt fa-3x icon-gradient"></i>
-                    <h3>Advanced Cybersecurity</h3>
-                    <p>Proactive threat hunting, security posture management, and Zero-Trust architecture implementation to safeguard your critical assets.</p>
-                    <a href="solutions.html#security" class="read-more-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                <div class="testimonial-slide">
+                    <blockquote>"Migration to Azure was flawless and seamless. Their cloud expertise is unmatched."</blockquote>
+                    <cite>— David R., CTO, Manufacturing Firm</cite>
                 </div>
-                <div class="service-card enhanced-card" data-animation="fade-in-up" data-delay="300">
-                    <i class="fas fa-database fa-3x icon-gradient"></i>
-                    <h3>Data Engineering & BI</h3>
-                    <p>Transforming raw data into actionable business intelligence through modern data lakes, warehouses, and powerful visualizations.</p>
-                    <a href="solutions.html#data" class="read-more-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
+            </div>
+
+            <div class="carousel-dots">
+                <span class="dot active" data-slide-index="0" aria-label="Go to testimonial 1"></span>
+                <span class="dot" data-slide-index="1" aria-label="Go to testimonial 2"></span>
+                <span class="dot" data-slide-index="2" aria-label="Go to testimonial 3"></span>
             </div>
         </div>
     </section>
 
-    <section class="testimonials-section background-secondary-dark">
+    <section id="contact" class="contact section-reveal">
         <div class="container">
-            <h2 class="section-title" data-animation="fade-in">What Our Partners Say</h2>
-            <div class="testimonial-carousel-container" data-animation="fade-in" data-delay="100">
-                <div class="testimonial-carousel" id="testimonial-carousel">
-                    <div class="testimonial-card">
-                        <i class="fas fa-quote-left quote-icon"></i>
-                        <p class="testimonial-content">"Quantumcom was instrumental in our shift to a serverless architecture. They reduced our cloud costs by 40% and improved deployment time by a factor of three. True technical mastery."</p>
-                        <div class="testimonial-author">
-                            <span class="author-name">Sarah Chen</span>
-                            <span class="author-title">CTO, Global FinTech</span>
-                        </div>
+            <h2 class="section-title">Get In **Touch**</h2>
+            <div class="contact-grid">
+
+                <form action="#" method="POST" class="contact-form">
+                    <p>Ready to pioneer your digital future? Send us a message.</p>
+                    <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
+                    <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email">
+                    <textarea name="message" placeholder="Your Project Details..." rows="5" required aria-label="Your Project Details"></textarea>
+                    <button type="submit" class="btn btn-primary">Send Inquiry</button>
+                </form>
+
+                <div class="contact-details">
+                    <h3>Contact Information</h3>
+                    <p><strong>Email:</strong> <a href="mailto:info@novatech.com">info@novatech.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+15551234567">(555) 123-4567</a></p>
+                    <p><strong>Address:</strong> 101 Tech Drive, Silicon Valley</p>
+
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn Placeholder">in</a>
+                        <a href="#" aria-label="Twitter Placeholder">tw</a>
+                        <a href="#" aria-label="Facebook Placeholder">fb</a>
                     </div>
-                    <div class="testimonial-card">
-                        <i class="fas fa-quote-left quote-icon"></i>
-                        <p class="testimonial-content">"Their approach to data governance and AI implementation was strategic and highly effective. The predictive maintenance model they built saves us millions annually."</p>
-                        <div class="testimonial-author">
-                            <span class="author-name">Dr. Alex Kim</span>
-                            <span class="author-title">Head of Innovation, BioPharm Corp.</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <i class="fas fa-quote-left quote-icon"></i>
-                        <p class="testimonial-content">"We now have a cybersecurity posture that gives our leadership confidence. Their continuous monitoring service is non-negotiable for enterprise-level defense."</p>
-                        <div class="testimonial-author">
-                            <span class="author-name">Marcus Jones</span>
-                            <span class="author-title">Chief Security Officer, Energy Solutions</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-controls">
-                    <button class="carousel-btn prev-btn" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
-                    <div class="dots-container" id="dots-container"></div>
-                    <button class="carousel-btn next-btn" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="process-section">
-        <div class="container">
-            <h2 class="section-title" data-animation="fade-in-up">Our Proven Engagement Model</h2>
-            <div class="process-grid">
-                <div class="process-step" data-animation="fade-in-up">
-                    <div class="step-number">1</div>
-                    <h3>Discovery & Strategy</h3>
-                    <p>In-depth analysis of your current IT landscape and business objectives to define a clear transformation roadmap.</p>
-                </div>
-                <div class="process-step" data-animation="fade-in-up" data-delay="100">
-                    <div class="step-number">2</div>
-                    <h3>Architect & Develop</h3>
-                    <p>Designing custom, scalable, and secure solutions. Rapid prototyping and agile development cycles.</p>
-                </div>
-                <div class="process-step" data-animation="fade-in-up" data-delay="200">
-                    <div class="step-number">3</div>
-                    <h3>Integrate & Deploy</h3>
-                    <p>Seamless deployment with zero downtime, comprehensive change management, and team enablement.</p>
-                </div>
-                <div class="process-step" data-animation="fade-in-up" data-delay="300">
-                    <div class="step-number">4</div>
-                    <h3>Optimize & Evolve</h3>
-                    <p>Continuous monitoring, performance tuning, and adaptive evolution to ensure long-term competitive advantage.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <div class="container" data-animation="fade-in">
-            <h2>Ready to Transform Your Digital Core?</h2>
-            <p>Connect with our expert consultants for a strategic review of your technology roadmap.</p>
-            <a href="contact.html" class="btn btn-primary-gradient btn-large">Schedule Your Strategy Session</a>
         </div>
     </section>
 </main>
 
-<footer class="footer">
+<footer>
     <div class="container">
         <div class="footer-grid">
-            <div class="footer-brand">
-                <a href="index.html" class="logo">Quantumcom<span>.</span></a>
-                <p>Architecting Digital Mastery</p>
-                <div class="social-links">
-                    <a href="#" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Follow us on GitHub"><i class="fab fa-github"></i></a>
-                </div>
+
+            <div class="footer-col brand-info">
+                <h4>NovaTech Innovations</h4>
+                <p>"Pioneering Tomorrow's Digital Landscape."</p>
+                <p><a href="mailto:info@novatech.com">info@novatech.com</a></p>
+                <p>(555) 123-4567</p>
             </div>
-            <div class="footer-links">
-                <h3>Key Links</h3>
+
+            <div class="footer-col sitemap">
+                <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="solutions.html">Solutions</a></li>
-                    <li><a href="portfolio.html">Case Studies</a></li>
-                    <li><a href="about.html">Our Mission</a></li>
-                    <li><a href="blog.html">Insights</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#case-studies">Case Studies</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
-            <div class="footer-contact">
-                <h3>Global Hub</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Upperhill, Nairobi, Kenya</p>
-                <p><i class="fas fa-phone"></i> +254 (705) 762-775</p>
-                <p><i class="fas fa-envelope"></i> info@Quantumcom.com</p>
-            </div>
-            <div class="footer-newsletter">
-                <h3>Stay Ahead</h3>
-                <p>Subscribe to our Quarterly Tech Briefings.</p>
-                <form class="newsletter-form" action="#" method="POST">
-                    <input type="email" placeholder="Your corporate email" aria-label="Email address for newsletter" required>
-                    <button type="submit" aria-label="Subscribe to newsletter">Subscribe</button>
+
+            <div class="footer-col newsletter">
+                <h4>Stay Updated</h4>
+                <p>Subscribe to our tech newsletter.</p>
+                <form action="#" class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required aria-label="Newsletter email input">
+                    <button type="submit" class="btn btn-secondary">Subscribe</button>
                 </form>
             </div>
         </div>
+
         <div class="footer-bottom">
-            <p>&copy; 2025 Quantumcom Digital. All rights reserved.</p>
-            <div class="footer-legal">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-            </div>
-            <button class="dark-mode-toggle" aria-label="Toggle dark mode">
-                <i class="fas fa-moon"></i>
-            </button>
+            <p>&copy; <span id="current-year"></span> NovaTech Innovations. All rights reserved.</p>
         </div>
     </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

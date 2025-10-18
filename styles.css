@@ -1,0 +1,686 @@
+/*
+================================
+1. CSS Variables & Reset
+================================
+*/
+:root {
+    /* Color Palette */
+    --color-primary: #0a1020;         /* Deep Charcoal/Navy Blue (Dark Background) */
+    --color-accent: #00eeff;          /* Electric Blue (Neon Accent) */
+    --color-text-light: #f0f0f0;      /* Light Grey/White (Text on Dark Background) */
+    --color-neutral-bg: #151a2b;      /* Slightly lighter dark background for contrast */
+    --color-card-bg: #1f253b;         /* Background for cards/elements */
+    --color-border: #353b4f;          /* Subtle border color */
+
+    /* Typography */
+    --font-primary: 'Poppins', sans-serif;
+    --font-size-base: 1.125rem; /* 18px for better readability */
+
+    /* Layout */
+    --max-width: 1200px;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Base Typography */
+h1, h2, h3 {
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.75rem; }
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: var(--color-text-light);
+}
+
+ul {
+    list-style: none;
+}
+
+/*
+================================
+2. Utility Classes
+================================
+*/
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    width: 100%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    font-weight: 700;
+    color: var(--color-text-light);
+}
+
+.section-title strong {
+    color: var(--color-accent);
+}
+
+section {
+    padding: var(--spacing-lg) 0;
+    position: relative;
+    overflow: hidden; /* Required for subtle animations */
+}
+
+/* Call-to-Action Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid transparent;
+    transition: all var(--transition-speed);
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    border-color: var(--color-accent);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--color-accent);
+    box-shadow: 0 0 15px rgba(0, 238, 255, 0.6);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+/*
+================================
+3. Header & Navigation
+================================
+*/
+header {
+    background-color: var(--color-primary);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-border);
+    z-index: 1000; /* High z-index for sticky header */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Sticky Header Style */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-light);
+    text-transform: uppercase;
+}
+
+.logo strong {
+    color: var(--color-accent);
+}
+
+/* Desktop Nav (Hidden on mobile) */
+#desktop-nav {
+    display: none;
+}
+
+#desktop-nav ul {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+#desktop-nav a {
+    color: var(--color-text-light);
+    padding: 0.5rem 0;
+    font-weight: 600;
+    position: relative;
+}
+
+#desktop-nav a:hover {
+    color: var(--color-accent);
+}
+
+/* Mobile Hamburger Menu */
+.hamburger {
+    display: flex; /* Show on mobile */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.hamburger .bar {
+    width: 2rem;
+    height: 3px;
+    background-color: var(--color-accent);
+    transition: all var(--transition-speed) ease-in-out;
+    border-radius: 1px;
+}
+
+/* Mobile Navigation Drawer */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    max-width: 300px;
+    height: 100%;
+    background-color: var(--color-primary);
+    padding: 5rem var(--spacing-md) var(--spacing-md);
+    transform: translateX(100%); /* Start off-screen */
+    transition: transform var(--transition-speed) ease-in-out;
+    z-index: 999;
+    border-left: 2px solid var(--color-accent);
+}
+
+.mobile-menu.open {
+    transform: translateX(0); /* Slide in */
+}
+
+.mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu li {
+    margin-bottom: var(--spacing-md);
+}
+
+.mobile-menu a {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--color-text-light);
+    font-weight: 600;
+    padding: 0.5rem 0;
+}
+
+.mobile-menu a:hover,
+.mobile-menu a.cta-link {
+    color: var(--color-accent);
+}
+
+/* Hamburger transition when open (for X effect) handled in JS class */
+
+/*
+================================
+4. Hero Section
+================================
+*/
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 8rem; /* Space for fixed header */
+    background-color: var(--color-neutral-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-visual-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.15;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23151a2b"/><path d="M0 0h10v10H0zm20 20h10v10H20zm20 20h10v10H40zm20 20h10v10H60zm20 20h10v10H80z" fill="%2300eeff" opacity="0.1"/></svg>');
+    background-size: 200px;
+    z-index: 0;
+}
+
+.hero-content {
+    max-width: 800px;
+    z-index: 1;
+}
+
+.tagline {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+}
+
+.mission {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: var(--spacing-md);
+}
+
+/*
+================================
+5. Services Section
+================================
+*/
+.services {
+    background-color: var(--color-primary);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.service-card {
+    background-color: var(--color-card-bg);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 238, 255, 0.15);
+    border-color: var(--color-accent);
+}
+
+.service-card .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    color: var(--color-text-light);
+    margin-bottom: 0.75rem;
+}
+
+.service-card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #a0a0a0;
+}
+
+.read-more {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/*
+================================
+6. Case Studies & About
+================================
+*/
+.case-studies {
+    background-color: var(--color-neutral-bg);
+}
+
+.case-study-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.case-study-content .text-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.case-study-visual-placeholder {
+    flex: 1;
+    min-height: 250px;
+    background-color: var(--color-primary);
+    border: 2px dashed var(--color-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-md);
+    text-align: center;
+    border-radius: 8px;
+    opacity: 0.8;
+}
+
+/* About Section */
+.about {
+    text-align: center;
+    background-color: var(--color-primary);
+}
+
+.mission-statement {
+    max-width: 800px;
+    margin: 0 auto var(--spacing-md);
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.mission-statement strong {
+    color: var(--color-accent);
+}
+
+/*
+================================
+7. Testimonials Carousel
+================================
+*/
+.testimonials {
+    background-color: var(--color-neutral-bg);
+}
+
+.testimonial-carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    overflow: hidden;
+    min-height: 150px;
+}
+
+.testimonial-slide {
+    text-align: center;
+    padding: var(--spacing-md);
+    transition: opacity var(--transition-speed) ease-in-out;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none; /* Make inactive slides unclickable */
+}
+
+.testimonial-slide.active {
+    opacity: 1;
+    position: relative; /* Bring active slide back to normal flow */
+    pointer-events: auto;
+}
+
+blockquote {
+    font-style: italic;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding: 0 1rem;
+    color: var(--color-text-light);
+}
+
+blockquote::before, blockquote::after {
+    content: '"';
+    font-size: 2.5rem;
+    color: var(--color-accent);
+    position: absolute;
+}
+
+blockquote::before {
+    left: 0;
+    top: -15px;
+}
+blockquote::after {
+    right: 0;
+    bottom: -15px;
+}
+
+
+cite {
+    display: block;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-accent);
+    margin-top: 1rem;
+}
+
+.carousel-dots {
+    text-align: center;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: var(--color-border);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+.dot.active {
+    background-color: var(--color-accent);
+    box-shadow: 0 0 8px var(--color-accent);
+}
+
+/*
+================================
+8. Contact Section & Footer
+================================
+*/
+.contact {
+    background-color: var(--color-primary);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-light);
+    border-radius: 5px;
+    resize: vertical;
+    font-family: var(--font-primary);
+}
+
+.contact-form button {
+    width: 100%;
+}
+
+.contact-details h3 {
+    margin-bottom: 1rem;
+}
+
+.contact-details p {
+    margin-bottom: 0.5rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--color-accent);
+    border-radius: 50%;
+    color: var(--color-accent);
+    margin-right: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.social-icons a:hover {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--color-neutral-bg);
+    padding: var(--spacing-lg) 0 1rem;
+    border-top: 1px solid var(--color-border);
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.footer-col h4 {
+    color: var(--color-text-light);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.footer-col a {
+    color: #ccc;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.footer-col a:hover {
+    color: var(--color-accent);
+}
+
+.newsletter-form input {
+    padding: 0.75rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-light);
+    border-radius: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.9rem;
+    color: #999;
+}
+
+
+/*
+================================
+9. Animations (On-Scroll Reveal)
+================================
+*/
+/* The default state (hidden/off-screen) */
+.section-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* The revealed state (visible/on-screen) */
+.section-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/*
+================================
+10. Media Queries (Responsiveness)
+================================
+*/
+/* Tablet and larger */
+@media (min-width: 768px) {
+    h1 { font-size: 4.5rem; }
+    h2 { font-size: 3rem; }
+
+    .hero {
+        text-align: left;
+        min-height: 90vh;
+        padding-top: 6rem;
+    }
+    .hero-content {
+        text-align: left;
+        max-width: 600px;
+    }
+
+    /* Swap mobile nav with desktop nav */
+    #desktop-nav {
+        display: block;
+    }
+    .hamburger {
+        display: none;
+    }
+
+    .case-study-content {
+        flex-direction: row;
+    }
+    .case-study-content .text-content {
+        padding-right: var(--spacing-md);
+    }
+    .contact-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+    .contact-form button {
+        width: auto;
+    }
+
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 var(--spacing-lg);
+    }
+
+    .services-grid {
+        gap: var(--spacing-lg);
+    }
+
+    /* Fine-tuning for the desktop view */
+    .footer-grid {
+        gap: var(--spacing-lg);
+    }
+}
