@@ -1,0 +1,144 @@
+/* ===== ENHANCED STYLES FOR QUANTUMCOM ===== */
+/* Combining the best of NovaTech's functionality with QuantumCom's modern design */
+
+/* ===== ACCESSIBILITY ENHANCEMENTS & DARK MODE OVERRIDES ===== */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--accent-neon);
+    color: var(--primary-dark);
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 1000;
+    font-weight: 600;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Enhanced focus styles for better accessibility */
+*:focus-visible {
+    outline: 2px solid var(--accent-neon);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Dark Mode Toggle Visual */
+.dark-mode-toggle {
+    transition: var(--transition);
+}
+
+/* ===== FADE-IN ANIMATIONS (Used by JS) ===== */
+.fade-in, [data-animation="fade-in"], [data-animation="fade-in-up"] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in.visible, [data-animation].visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Apply staggered delay based on HTML data-delay attribute */
+[data-animation][data-delay="100"] { transition-delay: 0.1s; }
+[data-animation][data-delay="200"] { transition-delay: 0.2s; }
+[data-animation][data-delay="300"] { transition-delay: 0.3s; }
+[data-animation][data-delay="400"] { transition-delay: 0.4s; }
+
+
+/* ===== ENHANCED SERVICE CARDS (For Home & Solutions) ===== */
+.enhanced-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.enhanced-card:hover {
+    border-color: var(--accent-secondary);
+}
+
+/* Add a subtle glow/pulse effect */
+@keyframes neon-pulse {
+    0% { box-shadow: 0 0 5px var(--accent-neon-glow); }
+    50% { box-shadow: 0 0 15px var(--accent-neon-glow); }
+    100% { box-shadow: 0 0 5px var(--accent-neon-glow); }
+}
+
+.stats-grid .stat {
+    position: relative;
+    overflow: hidden;
+    animation: neon-pulse 5s infinite ease-in-out;
+}
+
+/* Responsive adjustments for mobile navigation menu toggle */
+.nav-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.nav-toggle.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+/* Responsive Overrides to ensure layout consistency */
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .client-logos-strip .logos {
+        gap: var(--spacing-md);
+    }
+
+    .process-step::after {
+        right: 50%;
+        left: auto;
+        bottom: -1rem;
+        top: auto;
+        transform: translateX(50%);
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .stat-number {
+        font-size: 3rem;
+    }
+}
+
+/* ===== PERFORMANCE OPTIMIZATIONS (Respect Reduced Motion) ===== */
+@media (prefers-reduced-motion: reduce) {
+    .fade-in,
+    .enhanced-card,
+    .carousel-btn,
+    .dot,
+    .stat,
+    [data-animation] {
+        transition: none !important;
+        animation: none !important;
+    }
+
+    .fade-in, [data-animation] {
+        opacity: 1;
+        transform: none;
+    }
+}

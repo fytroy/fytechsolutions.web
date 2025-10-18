@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Quantumcom Digital</title>
+    <title>Case Studies & Portfolio - Quantumcom Digital</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/enhanced-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -25,9 +25,9 @@
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="solutions.html" class="nav-link">Solutions</a></li>
                     <li><a href="about.html" class="nav-link">About Us</a></li>
-                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
                     <li><a href="blog.html" class="nav-link">Insights</a></li>
-                    <li><a href="contact.html" class="nav-link btn btn-gradient-border active">Contact Us</a></li>
+                    <li><a href="contact.html" class="nav-link btn btn-gradient-border">Contact Us</a></li>
                 </ul>
             </div>
         </nav>
@@ -37,67 +37,54 @@
 <main>
     <section class="page-hero">
         <div class="container" data-animation="fade-in-up">
-            <h1 class="page-title">Let's Discuss Your Digital Roadmap</h1>
-            <p class="page-subtitle">Connect with our enterprise architects to start a strategic conversation about your next project.</p>
+            <h1 class="page-title">Results-Driven Digital Transformation</h1>
+            <p class="page-subtitle">Explore a selection of our high-impact case studies that showcase measurable business value and technical depth.</p>
         </div>
     </section>
 
     <section class="content-section">
-        <div class="container contact-grid">
-            <div class="contact-form-container" data-animation="fade-in" data-delay="100">
-                <form class="enhanced-form" id="contact-form" action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required placeholder="Jane Doe">
+        <div class="container">
+            <h2 class="section-title" data-animation="fade-in-up">Featured Case Studies</h2>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-card" data-animation="fade-in-up">
+                    <div class="card-content">
+                        <h3>Hyperscale Cloud Migration for Global FinTech</h3>
+                        <p>A full-scale migration of core banking systems to a secure, hybrid AWS environment. Implemented FinOps governance to track and optimize expenditure.</p>
+                        <div class="results-badge">
+                            <span class="tag">Cloud Transformation</span>
+                            <span class="tag-result">**40%** Cost Reduction</span>
+                        </div>
+                        <a href="blog-post-1.html" class="read-more-link">Read Full Case Study <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Work Email</label>
-                        <input type="email" id="email" name="email" required placeholder="jane.doe@company.com">
+                </div>
+                <div class="portfolio-card" data-animation="fade-in-up" data-delay="100">
+                    <div class="card-content">
+                        <h3>Predictive Route Optimization with Custom AI/ML</h3>
+                        <p>Designed and deployed an AI model to analyze real-time variables (traffic, weather, inventory) for a national logistics carrier, automating delivery scheduling.</p>
+                        <div class="results-badge">
+                            <span class="tag">Applied AI</span>
+                            <span class="tag-result">**22%** Reduction in Delivery Time</span>
+                        </div>
+                        <a href="blog-post-2.html" class="read-more-link">Read Full Case Study <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="form-group">
-                        <label for="subject">Service of Interest</label>
-                        <select id="subject" name="subject" required>
-                            <option value="">Select a service...</option>
-                            <option value="cloud">Cloud Transformation & DevOps</option>
-                            <option value="ai">Applied AI & Machine Learning</option>
-                            <option value="security">Advanced Cybersecurity</option>
-                            <option value="data">Data Engineering & BI</option>
-                            <option value="other">General Inquiry / Partnership</option>
-                        </select>
+                </div>
+                <div class="portfolio-card" data-animation="fade-in-up" data-delay="200">
+                    <div class="card-content">
+                        <h3>Implementing Zero-Trust Architecture for HealthTech Compliance</h3>
+                        <p>Secured sensitive patient data and achieved HIPAA compliance by implementing granular access controls and micro-segmentation across all environments.</p>
+                        <div class="results-badge">
+                            <span class="tag">Cybersecurity</span>
+                            <span class="tag-result">**100%** Compliance Score</span>
+                        </div>
+                        <a href="blog-post-3.html" class="read-more-link">Read Full Case Study <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project requirements and goals..."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary-gradient btn-large">Send Inquiry</button>
-                    <p class="form-message" id="form-message"></p>
-                </form>
+                </div>
             </div>
 
-            <div class="contact-details" data-animation="fade-in" data-delay="300">
-                <h3>Our Global Hub</h3>
-                <div class="detail-item">
-                    <i class="fas fa-map-marker-alt icon-gradient"></i>
-                    <p>Upperhill, Nairobi, Kenya</p>
-                </div>
-                <div class="detail-item">
-                    <i class="fas fa-phone icon-gradient"></i>
-                    <p>+254 (705) 762-775</p>
-                </div>
-                <div class="detail-item">
-                    <i class="fas fa-envelope icon-gradient"></i>
-                    <p>info@Quantumcom.com</p>
-                </div>
-
-                <h3>Business Hours</h3>
-                <p>Monday - Friday: 8:00 AM - 5:00 PM (EAT)</p>
-                <p>24/7 Support available for premium clients.</p>
-
-                <div class="social-links" style="margin-top: 2rem;">
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in fa-2x"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter fa-2x"></i></a>
-                    <a href="#" aria-label="GitHub"><i class="fab fa-github fa-2x"></i></a>
-                </div>
+            <div class="cta-banner" data-animation="fade-in-up" style="margin-top: 3rem;">
+                <p>Your next success story starts here. Tell us about your most complex challenge.</p>
+                <a href="contact.html" class="btn btn-secondary-gradient">Request Portfolio Access</a>
             </div>
         </div>
     </section>
