@@ -3,42 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NovaTech Innovations | Pioneering Tomorrow's Digital Landscape</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>NovaTech Innovations | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="#" type="image/x-icon">
+    <meta name="description" content="NovaTech Innovations: Pioneering Tomorrow's Digital Landscape with cutting-edge Cloud, CyberSecurity, and Software Development solutions.">
 </head>
 <body>
 
-<header id="main-header" class="sticky-header">
+<header id="main-header">
     <div class="container">
-        <a href="#" class="logo">NovaTech **Innovations**</a>
+        <a href="index.html" class="logo">NovaTech <span>Innovations</span></a>
 
         <nav id="desktop-nav">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#case-studies">Case Studies</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact" class="cta-link">Contact</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" class="btn-secondary btn">Contact Us</a></li>
             </ul>
         </nav>
 
         <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
         </button>
     </div>
 </header>
 
 <nav id="mobile-nav" class="mobile-menu">
     <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#case-studies">Case Studies</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#contact" class="cta-link">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
     </ul>
 </nav>
 
@@ -47,90 +45,81 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="tagline">Pioneering Tomorrow's Digital Landscape.</h1>
-                <p class="mission">We deliver cutting-edge technology solutions that drive business growth and efficiency for our global clientele. </p>
-                <a href="#contact" class="btn btn-primary">Start Your Project ➡️</a>
+                <p class="mission">Deliver cutting-edge technology solutions that drive business growth and efficiency for our global clientele.</p>
+                <a href="contact.html" class="btn btn-primary">Start Your Project ➡️</a>
             </div>
         </div>
-        <div class="hero-visual-placeholder"></div>
     </section>
 
-    <section id="services" class="services section-reveal">
+    <section id="services-preview" class="services-section section-reveal">
         <div class="container">
-            <h2 class="section-title">Core **Services**</h2>
+            <h2 class="section-title">Our Core <strong>Expertise</strong></h2>
             <div class="services-grid">
 
-                <div class="service-card">
-                    <div class="icon">☁️</div>
+                <a href="services.html#cloud" class="service-card">
+                    <span class="icon">☁️</span>
                     <h3>Cloud Computing</h3>
-                    <p>Managed AWS/Azure services, seamless migration, and cost optimization to scale your infrastructure efficiently.</p>
-                    <a href="#" class="read-more">Learn More</a>
-                </div>
+                    <p>Managed AWS/Azure services, seamless migration, and optimization for scalable infrastructure.</p>
+                </a>
 
-                <div class="service-card">
-                    <div class="icon">🔒</div>
+                <a href="services.html#cybersecurity" class="service-card">
+                    <span class="icon">🔒</span>
                     <h3>Cybersecurity</h3>
-                    <p>Enterprise-level protection, penetration testing, and real-time threat monitoring to secure your critical assets.</p>
-                    <a href="#" class="read-more">Learn More</a>
-                </div>
+                    <p>Penetration testing, real-time threat monitoring, and enterprise-level protection against advanced threats.</p>
+                </a>
 
-                <div class="service-card">
-                    <div class="icon">💻</div>
+                <a href="services.html#software" class="service-card">
+                    <span class="icon">💻</span>
                     <h3>Software Development</h3>
-                    <p>Custom web, mobile, and enterprise applications engineered for performance, reliability, and user experience.</p>
-                    <a href="#" class="read-more">Learn More</a>
-                </div>
+                    <p>Custom web, mobile, and enterprise applications engineered for performance and reliability.</p>
+                </a>
 
-                <div class="service-card">
-                    <div class="icon">📊</div>
+                <a href="services.html#data" class="service-card">
+                    <span class="icon">📊</span>
                     <h3>Data Analytics</h3>
-                    <p>Business intelligence, big data processing, and predictive modeling for data-driven strategic decisions.</p>
-                    <a href="#" class="read-more">Learn More</a>
-                </div>
+                    <p>Business intelligence, big data processing, and predictive modeling for data-driven strategy.</p>
+                </a>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="services.html" class="btn btn-secondary">View All Services</a>
             </div>
         </div>
     </section>
 
-    <section id="case-studies" class="case-studies section-reveal">
+    <section id="featured-case" class="case-studies section-reveal" style="background-color: var(--color-primary);">
         <div class="container">
-            <h2 class="section-title">Success **Stories**</h2>
-            <div class="case-study-content">
+            <h2 class="section-title">Featured <strong>Success</strong></h2>
+            <div class="case-study-block">
                 <div class="text-content">
-                    <h3>Globex Corp: AI-Driven BI Dashboard</h3>
-                    <p class="summary">Transformed 'Globex Corp' with a custom **AI-driven BI dashboard**, resulting in a **35% increase in operational efficiency**.</p>
-                    <p>Our team integrated advanced machine learning models with their existing data streams, providing real-time, actionable insights that empowered their leadership to optimize resource allocation and predict market shifts with unprecedented accuracy.</p>
-                    <a href="#" class="btn btn-secondary">Read Full Case Study</a>
+                    <h3>Transformed 'Globex Corp' Operations</h3>
+                    <p class="summary" style="font-size: 1.3rem;">**A custom AI-driven BI dashboard** led to a **35% increase in operational efficiency** for Globex Corp.</p>
+                    <p style="color: var(--color-text-muted);">We leveraged predictive analytics and machine learning to create a centralized dashboard that provided leadership with real-time, actionable insights, revolutionizing their resource allocation strategy.</p>
+                    <a href="case-studies.html" class="btn btn-primary">Explore Case Studies</a>
                 </div>
-                <div class="case-study-visual-placeholder">
-                    <p>INSTRUCTION: Replace with an image representing a graph/dashboard/BI.</p>
+                <div class="visual">
+                    <img src="#" alt="Placeholder for AI-driven BI Dashboard Interface" />
+                    <p style="font-size: 0.85rem; color: var(--color-accent); text-align: center; margin-top: 0.5rem;">[INSTRUCTION: Placeholder Image - Replace with high-quality BI dashboard visual]</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="about" class="about section-reveal">
-        <div class="container">
-            <h2 class="section-title">Why **NovaTech**?</h2>
-            <p class="mission-statement">Our foundation is built on **trust, innovation, and dynamic execution**. We are not just a vendor; we are your strategic technology partner, committed to your long-term digital success and pioneering the future of your business.</p>
-            <a href="#contact" class="btn btn-primary">Let's Connect</a>
         </div>
     </section>
 
     <section id="testimonials" class="testimonials section-reveal">
         <div class="container">
-            <h2 class="section-title">Client **Trust**</h2>
+            <h2 class="section-title">Client <strong>Endorsements</strong></h2>
 
             <div class="testimonial-carousel">
                 <div class="testimonial-slide active">
-                    <blockquote>"NovaTech's cybersecurity team secured our entire enterprise. The peace of mind is invaluable."</blockquote>
+                    <blockquote>"NovaTech's integration of cloud solutions was seamless. The cost savings and scalability we achieved were immediate and significant."</blockquote>
                     <cite>— Alex C., CEO, Financial Group</cite>
                 </div>
                 <div class="testimonial-slide">
-                    <blockquote>"The custom application they built increased our market response time by 50%. Truly innovative solutions!"</blockquote>
+                    <blockquote>"Their custom application increased our market response time by 50%. Truly innovative and robust engineering."</blockquote>
                     <cite>— Sarah L., COO, E-Commerce Startup</cite>
                 </div>
                 <div class="testimonial-slide">
-                    <blockquote>"Migration to Azure was flawless and seamless. Their cloud expertise is unmatched."</blockquote>
-                    <cite>— David R., CTO, Manufacturing Firm</cite>
+                    <blockquote>"The most thorough penetration testing we've ever had. We trust NovaTech for enterprise-level threat protection."</blockquote>
+                    <cite>— David R., CTO, Global Manufacturing</cite>
                 </div>
             </div>
 
@@ -138,35 +127,6 @@
                 <span class="dot active" data-slide-index="0" aria-label="Go to testimonial 1"></span>
                 <span class="dot" data-slide-index="1" aria-label="Go to testimonial 2"></span>
                 <span class="dot" data-slide-index="2" aria-label="Go to testimonial 3"></span>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact section-reveal">
-        <div class="container">
-            <h2 class="section-title">Get In **Touch**</h2>
-            <div class="contact-grid">
-
-                <form action="#" method="POST" class="contact-form">
-                    <p>Ready to pioneer your digital future? Send us a message.</p>
-                    <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
-                    <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email">
-                    <textarea name="message" placeholder="Your Project Details..." rows="5" required aria-label="Your Project Details"></textarea>
-                    <button type="submit" class="btn btn-primary">Send Inquiry</button>
-                </form>
-
-                <div class="contact-details">
-                    <h3>Contact Information</h3>
-                    <p><strong>Email:</strong> <a href="mailto:info@novatech.com">info@novatech.com</a></p>
-                    <p><strong>Phone:</strong> <a href="tel:+15551234567">(555) 123-4567</a></p>
-                    <p><strong>Address:</strong> 101 Tech Drive, Silicon Valley</p>
-
-                    <div class="social-icons">
-                        <a href="#" aria-label="LinkedIn Placeholder">in</a>
-                        <a href="#" aria-label="Twitter Placeholder">tw</a>
-                        <a href="#" aria-label="Facebook Placeholder">fb</a>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -178,19 +138,31 @@
 
             <div class="footer-col brand-info">
                 <h4>NovaTech Innovations</h4>
-                <p>"Pioneering Tomorrow's Digital Landscape."</p>
-                <p><a href="mailto:info@novatech.com">info@novatech.com</a></p>
-                <p>(555) 123-4567</p>
+                <p style="margin-bottom: 1rem;">"Pioneering Tomorrow's Digital Landscape."</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="LinkedIn Placeholder">in</a>
+                    <a href="#" aria-label="Twitter Placeholder">tw</a>
+                    <a href="#" aria-label="Facebook Placeholder">fb</a>
+                </div>
             </div>
 
             <div class="footer-col sitemap">
-                <h4>Quick Links</h4>
+                <h4>Company</h4>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#case-studies">Case Studies</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="case-studies.html">Success Stories</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col sitemap">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services.html#cloud">Cloud Computing</a></li>
+                    <li><a href="services.html#cybersecurity">Cybersecurity</a></li>
+                    <li><a href="services.html#software">Software Dev</a></li>
+                    <li><a href="services.html#data">Data Analytics</a></li>
                 </ul>
             </div>
 
@@ -199,13 +171,13 @@
                 <p>Subscribe to our tech newsletter.</p>
                 <form action="#" class="newsletter-form">
                     <input type="email" placeholder="Enter your email" required aria-label="Newsletter email input">
-                    <button type="submit" class="btn btn-secondary">Subscribe</button>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
                 </form>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; <span id="current-year"></span> NovaTech Innovations. All rights reserved.</p>
+            <p>&copy; <span id="current-year"></span> NovaTech Innovations. All rights reserved. | 101 Tech Drive, Silicon Valley</p>
         </div>
     </div>
 </footer>

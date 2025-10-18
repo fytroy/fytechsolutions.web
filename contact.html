@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaTech Innovations | Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Specific CSS for the Contact page layout */
+        .contact-page-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+        .contact-info-block {
+            padding: 2rem;
+            background-color: var(--color-card-bg);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-default);
+        }
+        .contact-info-block h3 {
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+            font-weight: var(--font-weight-medium);
+        }
+        .contact-info-block p {
+            margin-bottom: 0.75rem;
+            color: var(--color-text-light);
+        }
+        .contact-page-grid .contact-form input,
+        .contact-page-grid .contact-form textarea {
+            border: 1px solid var(--color-accent);
+            background-color: var(--color-primary);
+        }
+        @media (min-width: 768px) {
+            .contact-page-grid {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<header id="main-header">
+    <div class="container">
+        <a href="index.html" class="logo">NovaTech <span>Innovations</span></a>
+        <nav id="desktop-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" class="btn-secondary btn active">Contact Us</a></li>
+            </ul>
+        </nav>
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+    </div>
+</header>
+<nav id="mobile-nav" class="mobile-menu">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="contact-page" class="section-reveal" style="padding-top: 8rem; padding-bottom: 5rem;">
+        <div class="container">
+            <h1 class="section-title" style="text-align: left;">Let's Build Your <strong>Future</strong>.</h1>
+            <p style="font-size: 1.5rem; margin-bottom: 3rem; color: var(--color-text-muted);">Reach out to discuss your project, no matter the complexity or scale.</p>
+
+            <div class="contact-page-grid">
+
+                <form action="#" method="POST" class="contact-form">
+                    <h3>Tell Us About Your Project</h3>
+                    <input type="text" name="name" placeholder="Full Name" required aria-label="Your Full Name">
+                    <input type="email" name="email" placeholder="Work Email" required aria-label="Your Work Email">
+                    <input type="tel" name="phone" placeholder="Phone Number (Optional)" aria-label="Your Phone Number">
+                    <textarea name="message" placeholder="Project details, goals, and timeline..." rows="8" required aria-label="Project Details and Goals"></textarea>
+                    <button type="submit" class="btn btn-primary">Send Secure Inquiry</button>
+                </form>
+
+                <div class="contact-info-block">
+                    <h3>General Information</h3>
+
+                    <p><strong>Email:</strong> <a href="mailto:info@novatech.com">info@novatech.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+15551234567">(555) 123-4567</a></p>
+                    <p><strong>Office:</strong> 101 Tech Drive, Silicon Valley</p>
+
+                    <h3 style="margin-top: 2rem;">Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn Placeholder">in</a>
+                        <a href="#" aria-label="Twitter Placeholder">tw</a>
+                        <a href="#" aria-label="Facebook Placeholder">fb</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
